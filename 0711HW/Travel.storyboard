@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Ziq-eb-M3P">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="23727" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="dRW-MO-9lt">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--Travel Table View Controller-->
+        <!--Magazine-->
         <scene sceneID="ESg-6T-bTt">
             <objects>
                 <tableViewController id="Ziq-eb-M3P" customClass="TravelTableViewController" customModule="_711HW" customModuleProvider="target" sceneMemberID="viewController">
@@ -93,13 +94,50 @@
                             <outlet property="delegate" destination="Ziq-eb-M3P" id="7g0-nu-GTL"/>
                         </connections>
                     </tableView>
+                    <tabBarItem key="tabBarItem" title="Magazine" image="magazine.fill" catalog="system" id="zbl-mk-iww"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="GkM-eP-mIy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-198" y="-84"/>
+            <point key="canvasLocation" x="727.48091603053433" y="-84.507042253521135"/>
+        </scene>
+        <!--369Game-->
+        <scene sceneID="LiJ-sS-lbV">
+            <objects>
+                <viewController id="imE-v5-4HJ" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="LXw-4B-CuA">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <viewLayoutGuide key="safeArea" id="rVs-mb-BZv"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="369Game" image="hands.clap.fill" catalog="system" id="Scp-as-lJX"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8HT-cQ-63w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="727" y="653"/>
+        </scene>
+        <!--Tab Bar Controller-->
+        <scene sceneID="N22-d0-efL">
+            <objects>
+                <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="dRW-MO-9lt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cqw-lb-1FQ">
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </tabBar>
+                    <connections>
+                        <segue destination="Ziq-eb-M3P" kind="relationship" relationship="viewControllers" id="CPA-GF-PrU"/>
+                        <segue destination="imE-v5-4HJ" kind="relationship" relationship="viewControllers" id="asp-UG-o89"/>
+                    </connections>
+                </tabBarController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rvV-Fe-Wnb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-199.23664122137404" y="-84.507042253521135"/>
         </scene>
     </scenes>
     <resources>
+        <image name="hands.clap.fill" catalog="system" width="128" height="121"/>
+        <image name="magazine.fill" catalog="system" width="110" height="128"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
