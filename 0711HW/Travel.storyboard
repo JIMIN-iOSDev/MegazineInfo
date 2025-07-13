@@ -117,22 +117,34 @@
                                 </connections>
                             </textField>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="WY8-h2-v9b">
-                                <rect key="frame" x="24" y="226" width="345" height="200"/>
+                                <rect key="frame" x="24" y="226" width="345" height="250"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="200" id="dpj-Oa-LfP"/>
+                                    <constraint firstAttribute="height" constant="250" id="dpj-Oa-LfP"/>
                                 </constraints>
                                 <color key="textColor" systemColor="labelColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2Lw-Tt-OLZ">
+                                <rect key="frame" x="24" y="496" width="345" height="100"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="100" id="ppH-d2-XnA"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="heavy" pointSize="25"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="rVs-mb-BZv"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="GYM-dW-6mE" firstAttribute="leading" secondItem="rVs-mb-BZv" secondAttribute="leading" constant="24" id="2ya-xH-nYA"/>
                             <constraint firstItem="WY8-h2-v9b" firstAttribute="centerX" secondItem="LXw-4B-CuA" secondAttribute="centerX" id="6J3-sf-aUF"/>
+                            <constraint firstItem="rVs-mb-BZv" firstAttribute="trailing" secondItem="2Lw-Tt-OLZ" secondAttribute="trailing" constant="24" id="EyG-XT-EzQ"/>
                             <constraint firstItem="WY8-h2-v9b" firstAttribute="leading" secondItem="rVs-mb-BZv" secondAttribute="leading" constant="24" id="HlH-q7-u91"/>
+                            <constraint firstItem="2Lw-Tt-OLZ" firstAttribute="top" secondItem="WY8-h2-v9b" secondAttribute="bottom" constant="20" id="L6R-QX-kGG"/>
+                            <constraint firstItem="2Lw-Tt-OLZ" firstAttribute="leading" secondItem="rVs-mb-BZv" secondAttribute="leading" constant="24" id="TQ2-R2-g55"/>
                             <constraint firstItem="WY8-h2-v9b" firstAttribute="top" secondItem="GYM-dW-6mE" secondAttribute="bottom" constant="50" id="lDV-cW-OPq"/>
                             <constraint firstItem="rVs-mb-BZv" firstAttribute="trailing" secondItem="WY8-h2-v9b" secondAttribute="trailing" constant="24" id="q3e-wg-fSb"/>
                             <constraint firstItem="rVs-mb-BZv" firstAttribute="trailing" secondItem="GYM-dW-6mE" secondAttribute="trailing" constant="24" id="rEg-hA-O6d"/>
@@ -143,6 +155,7 @@
                     <connections>
                         <outlet property="numberTextField" destination="GYM-dW-6mE" id="7yA-aX-mhY"/>
                         <outlet property="numberTextView" destination="WY8-h2-v9b" id="gmg-sj-jl5"/>
+                        <outlet property="resultLabel" destination="2Lw-Tt-OLZ" id="kDc-7M-8oe"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8HT-cQ-63w" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
