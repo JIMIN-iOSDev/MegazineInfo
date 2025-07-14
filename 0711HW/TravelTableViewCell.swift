@@ -2,7 +2,7 @@
 //  TravelTableViewCell.swift
 //  0711HW
 //
-//  Created by Jimin on 7/12/25.
+//  Created by Jimin on 7/14/25.
 //
 
 import UIKit
@@ -16,7 +16,9 @@ class TravelTableViewCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        
+        titleLabel.numberOfLines = 0
     }
 
+    
 }

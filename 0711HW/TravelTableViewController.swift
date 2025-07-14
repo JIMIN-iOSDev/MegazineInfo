@@ -37,7 +37,11 @@ class TravelTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        tableView.rowHeight = 450
+        tableView.rowHeight = UITableView.automaticDimension
+        
+        let xib = UINib(nibName: "TravelTableViewCell", bundle: nil)
+        tableView.register(xib, forCellReuseIdentifier: "TravelTableViewCell")
+        
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -45,7 +49,7 @@ class TravelTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: "travelCell", for: indexPath) as! TravelTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
         
         cell.titleLabel.text = magazine[indexPath.row].title
         cell.subtitleLabel.text = magazine[indexPath.row].subtitle

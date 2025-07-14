@@ -135,62 +135,6 @@
                                 <constraint firstItem="Scx-mU-ofa" firstAttribute="centerY" secondItem="Wfd-Py-U5Z" secondAttribute="centerY" id="jA5-dS-6Oj"/>
                             </constraints>
                         </view>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="travelCell" rowHeight="488" id="O4h-hU-hku" customClass="TravelTableViewCell" customModule="_711HW" customModuleProvider="target">
-                                <rect key="frame" x="0.0" y="94" width="393" height="488"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="O4h-hU-hku" id="eMq-SX-9Xc">
-                                    <rect key="frame" x="0.0" y="0.0" width="393" height="488"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                    <subviews>
-                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="UKO-3p-N9E">
-                                            <rect key="frame" x="50" y="11" width="293" height="293"/>
-                                            <constraints>
-                                                <constraint firstAttribute="width" secondItem="UKO-3p-N9E" secondAttribute="height" multiplier="1:1" id="hGF-19-T8b"/>
-                                            </constraints>
-                                        </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="E1U-by-sQ7">
-                                            <rect key="frame" x="50" y="312" width="293" height="30"/>
-                                            <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PY9-8g-A4c">
-                                            <rect key="frame" x="50" y="346" width="293" height="21"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Rrq-c9-dwU">
-                                            <rect key="frame" x="50" y="377" width="293" height="18"/>
-                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                            <nil key="textColor"/>
-                                            <nil key="highlightedColor"/>
-                                        </label>
-                                    </subviews>
-                                    <constraints>
-                                        <constraint firstItem="UKO-3p-N9E" firstAttribute="leading" secondItem="eMq-SX-9Xc" secondAttribute="leadingMargin" constant="30" id="11K-be-rh1"/>
-                                        <constraint firstItem="E1U-by-sQ7" firstAttribute="leading" secondItem="eMq-SX-9Xc" secondAttribute="leadingMargin" constant="30" id="2uq-7U-XMa"/>
-                                        <constraint firstItem="PY9-8g-A4c" firstAttribute="top" secondItem="E1U-by-sQ7" secondAttribute="bottom" constant="4" id="3Jh-Dj-wgg"/>
-                                        <constraint firstItem="UKO-3p-N9E" firstAttribute="top" secondItem="eMq-SX-9Xc" secondAttribute="topMargin" id="5d8-Eb-v0Q"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="UKO-3p-N9E" secondAttribute="trailing" constant="30" id="JZk-ch-xbB"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="E1U-by-sQ7" secondAttribute="trailing" constant="30" id="Mk6-VY-5am"/>
-                                        <constraint firstItem="E1U-by-sQ7" firstAttribute="top" secondItem="UKO-3p-N9E" secondAttribute="bottom" constant="8" id="PFP-Nw-aXA"/>
-                                        <constraint firstItem="PY9-8g-A4c" firstAttribute="leading" secondItem="eMq-SX-9Xc" secondAttribute="leadingMargin" constant="30" id="RJ5-FJ-j9b"/>
-                                        <constraint firstItem="Rrq-c9-dwU" firstAttribute="top" secondItem="PY9-8g-A4c" secondAttribute="bottom" constant="10" id="Rr6-ld-zl9"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="Rrq-c9-dwU" secondAttribute="trailing" constant="30" id="Xtj-Aw-aQd"/>
-                                        <constraint firstAttribute="trailingMargin" secondItem="PY9-8g-A4c" secondAttribute="trailing" constant="30" id="YiO-m6-fbp"/>
-                                        <constraint firstItem="Rrq-c9-dwU" firstAttribute="leading" secondItem="eMq-SX-9Xc" secondAttribute="leadingMargin" constant="30" id="lJf-gc-cmi"/>
-                                    </constraints>
-                                </tableViewCellContentView>
-                                <connections>
-                                    <outlet property="dateLabel" destination="Rrq-c9-dwU" id="hGE-kw-5s9"/>
-                                    <outlet property="photoImageView" destination="UKO-3p-N9E" id="XCu-SW-rfk"/>
-                                    <outlet property="subtitleLabel" destination="PY9-8g-A4c" id="Dip-Ho-Ghk"/>
-                                    <outlet property="titleLabel" destination="E1U-by-sQ7" id="6kK-bC-Ty5"/>
-                                </connections>
-                            </tableViewCell>
-                        </prototypes>
                         <connections>
                             <outlet property="dataSource" destination="Ziq-eb-M3P" id="JjH-JV-MWm"/>
                             <outlet property="delegate" destination="Ziq-eb-M3P" id="7g0-nu-GTL"/>
