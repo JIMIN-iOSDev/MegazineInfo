@@ -16,6 +16,8 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        setBackground()
+        
         numberTextViewUI()
         resultLabel.text = ""
     }

@@ -37,6 +37,8 @@ class TravelTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setBackground()
+        
         tableView.rowHeight = UITableView.automaticDimension
         
         let xib = UINib(nibName: "TravelTableViewCell", bundle: nil)

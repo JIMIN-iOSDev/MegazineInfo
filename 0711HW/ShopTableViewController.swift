@@ -28,6 +28,8 @@ class ShopTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        setBackground()
+        
         tableView.rowHeight = 80
     }
 
