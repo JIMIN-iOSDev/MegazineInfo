@@ -16,7 +16,7 @@ struct Magazine {
 }
 
 class TravelTableViewController: UITableViewController {
-
+    
     var magazine: [Magazine] = [
         Magazine(title: "유럽 여행 쇼핑 성지, OOO은 꼭 가세요!", subtitle: "유럽의 인기 쇼핑 명소 총정리", photoImage: "https://cdn.pixabay.com/photo/2016/11/22/21/57/apparel-1850804_1280.jpg", date: "241118"),
         Magazine(title: "현지 MZ가 알려주는 오사카 MZ 인기 스팟", subtitle: "2025 오사카 여행엔 여기!", photoImage: "https://cdn.pixabay.com/photo/2020/10/22/14/05/moon-5676124_1280.jpg", date: "250103"),
@@ -51,23 +51,7 @@ class TravelTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TravelTableViewCell", for: indexPath) as! TravelTableViewCell
         
-        cell.titleLabel.text = magazine[indexPath.row].title
-        cell.subtitleLabel.text = magazine[indexPath.row].subtitle
-        
-        let url = URL(string: magazine[indexPath.row].photoImage)
-        cell.photoImageView.kf.setImage(with: url)
-        
-        let inputFormat = DateFormatter()
-        inputFormat.dateFormat = "yyMMdd"
-        
-        let outputFormat = DateFormatter()
-        outputFormat.dateFormat = "yy년 MM월 dd일"
-        
-        if let date = inputFormat.date(from: magazine[indexPath.row].date) {
-            cell.dateLabel.text = outputFormat.string(from: date)
-        } else {
-            cell.dateLabel.text = "날짜 없음"
-        }
+        cell.configure(row: magazine[indexPath.row])
         
         return cell
     }
