@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		ECB0A8AD2E20EA8D00F42EDC /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = ECB0A8AC2E20EA8D00F42EDC /* Kingfisher */; };
+		ECE8B3D42E268F710079FA95 /* Toast in Frameworks */ = {isa = PBXBuildFile; productRef = ECE8B3D32E268F710079FA95 /* Toast */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -40,6 +41,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECE8B3D42E268F710079FA95 /* Toast in Frameworks */,
 				ECB0A8AD2E20EA8D00F42EDC /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -84,6 +86,7 @@
 			name = 0711HW;
 			packageProductDependencies = (
 				ECB0A8AC2E20EA8D00F42EDC /* Kingfisher */,
+				ECE8B3D32E268F710079FA95 /* Toast */,
 			);
 			productName = 0711HW;
 			productReference = ECB0A8932E20E8CE00F42EDC /* 0711HW.app */;
@@ -115,6 +118,7 @@
 			minimizedProjectReferenceProxies = 1;
 			packageReferences = (
 				ECB0A8AB2E20EA8D00F42EDC /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				ECE8B3D22E268F710079FA95 /* XCRemoteSwiftPackageReference "Toast-Swift" */,
 			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = ECB0A8942E20E8CE00F42EDC /* Products */;
@@ -362,6 +366,14 @@
 				minimumVersion = 8.4.0;
 			};
 		};
+		ECE8B3D22E268F710079FA95 /* XCRemoteSwiftPackageReference "Toast-Swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/scalessec/Toast-Swift.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.1.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -369,6 +381,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = ECB0A8AB2E20EA8D00F42EDC /* XCRemoteSwiftPackageReference "Kingfisher" */;
 			productName = Kingfisher;
+		};
+		ECE8B3D32E268F710079FA95 /* Toast */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = ECE8B3D22E268F710079FA95 /* XCRemoteSwiftPackageReference "Toast-Swift" */;
+			productName = Toast;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
