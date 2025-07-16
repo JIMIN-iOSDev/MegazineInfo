@@ -13,6 +13,7 @@ class DetailViewController: UIViewController {
     @IBOutlet var posterImgeView: UIImageView!
     @IBOutlet var titleLabel: UILabel!
     @IBOutlet var subtitleLabel: UILabel!
+    @IBOutlet var anotherButton: UIButton!
     
     var travelRow: Travel?
     
@@ -25,9 +26,14 @@ class DetailViewController: UIViewController {
             titleLabel.text = row.title
             subtitleLabel.text = row.description
         }
+        
+        anotherButton.configure(title: "다른 관광지 보러 가기")
+        anotherButton.addTarget(self, action: #selector(anotherButtonTapped), for: .touchUpInside)
     }
     
-    @IBAction func anotherButtonTapped(_ sender: UIButton) {
+    @objc
+    func anotherButtonTapped() {
         navigationController?.popViewController(animated: true)
     }
+    
 }
