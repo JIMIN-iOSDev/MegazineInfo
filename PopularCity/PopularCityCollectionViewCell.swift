@@ -13,6 +13,8 @@ class PopularCityCollectionViewCell: UICollectionViewCell {
     @IBOutlet var cityName: UILabel!
     @IBOutlet var cityExplain: UILabel!
     
+    static let identifier = "PopularCityCollectionViewCell"
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         
