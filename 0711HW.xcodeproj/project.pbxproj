@@ -44,6 +44,31 @@
 			path = 0711HW;
 			sourceTree = "<group>";
 		};
+		ECE8B5D62E29360B0079FA95 /* Resource */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		ECE8B5D72E2936310079FA95 /* Shop */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Shop;
+			sourceTree = "<group>";
+		};
+		ECE8B5D82E29367C0079FA95 /* Travel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Travel;
+			sourceTree = "<group>";
+		};
+		ECE8B5D92E2936A00079FA95 /* Magazine */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Magazine;
+			sourceTree = "<group>";
+		};
+		ECE8B5DA2E29371F0079FA95 /* 369Game */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = 369Game;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +87,11 @@
 		ECB0A88A2E20E8CE00F42EDC = {
 			isa = PBXGroup;
 			children = (
+				ECE8B5DA2E29371F0079FA95 /* 369Game */,
+				ECE8B5D92E2936A00079FA95 /* Magazine */,
+				ECE8B5D82E29367C0079FA95 /* Travel */,
+				ECE8B5D72E2936310079FA95 /* Shop */,
+				ECE8B5D62E29360B0079FA95 /* Resource */,
 				EC735D6A2E28DBD100C40C28 /* PopularCity */,
 				EC735D692E28DBB000C40C28 /* Extension */,
 				ECB0A8952E20E8CE00F42EDC /* 0711HW */,
@@ -96,6 +126,11 @@
 				EC735D692E28DBB000C40C28 /* Extension */,
 				EC735D6A2E28DBD100C40C28 /* PopularCity */,
 				ECB0A8952E20E8CE00F42EDC /* 0711HW */,
+				ECE8B5D62E29360B0079FA95 /* Resource */,
+				ECE8B5D72E2936310079FA95 /* Shop */,
+				ECE8B5D82E29367C0079FA95 /* Travel */,
+				ECE8B5D92E2936A00079FA95 /* Magazine */,
+				ECE8B5DA2E29371F0079FA95 /* 369Game */,
 			);
 			name = 0711HW;
 			packageProductDependencies = (
