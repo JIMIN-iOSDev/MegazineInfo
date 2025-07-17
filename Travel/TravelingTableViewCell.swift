@@ -14,6 +14,7 @@ class TravelingTableViewCell: UITableViewCell {
     @IBOutlet var subtitleLabel: UILabel!
     @IBOutlet var saveLabel: UILabel!
     @IBOutlet var posterImageView: UIImageView!
+    @IBOutlet var likeButton: UIButton!
     
     static let identifier = "TravelingTableViewCell"
     let numberFormatter = NumberFormatter()
@@ -30,10 +31,14 @@ class TravelingTableViewCell: UITableViewCell {
         saveLabel.text = "저장 \(numberFormatter.string(for: row.save)!)"
         let url = URL(string: row.travelImage)
         posterImageView.kf.setImage(with: url)
+        
+        if row.like {
+            let image = UIImage(systemName: "heart.fill")
+            likeButton.setImage(image, for: .normal)
+        } else {
+            let image = UIImage(systemName: "heart")
+            likeButton.setImage(image, for: .normal)
+        }
     }
-
-//    @IBAction func likeButtonTapped(_ sender: UIButton) {
-//        
-//    }
     
 }

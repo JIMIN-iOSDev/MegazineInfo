@@ -13,7 +13,7 @@ struct Travel {
     let description: String
     let travelImage: String
     let save: Int
-    let like: Bool
+    var like: Bool
 }
 
 struct Ad {
@@ -100,6 +100,12 @@ class TravelingTableViewController: UITableViewController {
         let xib2 = UINib(nibName: AdvertiseTableViewCell.identifier, bundle: nil)
         tableView.register(xib2, forCellReuseIdentifier: AdvertiseTableViewCell.identifier)
     }
+    
+    @objc
+    func likeButtonTapped(_ sender: UIButton) {
+        travel[sender.tag].like.toggle()
+        tableView.reloadRows(at: [IndexPath(row: sender.tag + (sender.tag / 3), section: 0)], with: .fade)
+    }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return travel.count + advertisement.count
@@ -119,6 +125,9 @@ class TravelingTableViewController: UITableViewController {
             
             let travelIndex = indexPath.row - (indexPath.row / 4)
             cell.configure(row: travel[travelIndex])
+            
+            cell.likeButton.tag = travelIndex
+            cell.likeButton.addTarget(self, action: #selector(likeButtonTapped), for: .touchUpInside)
             
             return cell
         }

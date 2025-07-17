@@ -48,10 +48,10 @@
                         </constraints>
                     </imageView>
                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dER-wX-7WR">
-                        <rect key="frame" x="284" y="20" width="12" height="12"/>
+                        <rect key="frame" x="272" y="16" width="24" height="24"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="dER-wX-7WR" secondAttribute="height" multiplier="1:1" id="IzR-3v-5N5"/>
-                            <constraint firstAttribute="width" constant="12" id="c4Q-YW-p7F"/>
+                            <constraint firstAttribute="width" constant="24" id="c4Q-YW-p7F"/>
                         </constraints>
                         <state key="normal" title="Button"/>
                         <buttonConfiguration key="configuration" style="plain" image="heart" catalog="system">
@@ -71,12 +71,13 @@
                     <constraint firstAttribute="bottom" secondItem="gwx-t1-Crc" secondAttribute="bottom" constant="8" id="i0k-bI-ueZ"/>
                     <constraint firstAttribute="trailing" secondItem="dER-wX-7WR" secondAttribute="trailing" constant="24" id="jkA-Cf-8Nf"/>
                     <constraint firstItem="sLA-UD-4UJ" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="jqF-Wi-WVC"/>
-                    <constraint firstItem="dER-wX-7WR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="20" id="ls0-qB-bCc"/>
+                    <constraint firstItem="dER-wX-7WR" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="ls0-qB-bCc"/>
                     <constraint firstItem="gwx-t1-Crc" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="wmk-Ud-xe6"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
+                <outlet property="likeButton" destination="dER-wX-7WR" id="56n-Sw-GS6"/>
                 <outlet property="posterImageView" destination="7da-Fk-iCB" id="P4m-6k-uC0"/>
                 <outlet property="saveLabel" destination="gwx-t1-Crc" id="8G4-A6-jvl"/>
                 <outlet property="subtitleLabel" destination="sLA-UD-4UJ" id="kAk-eq-N73"/>
