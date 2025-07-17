@@ -26,6 +26,16 @@
 /* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
+		EC735D692E28DBB000C40C28 /* Extension */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		EC735D6A2E28DBD100C40C28 /* PopularCity */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = PopularCity;
+			sourceTree = "<group>";
+		};
 		ECB0A8952E20E8CE00F42EDC /* 0711HW */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
@@ -52,6 +62,8 @@
 		ECB0A88A2E20E8CE00F42EDC = {
 			isa = PBXGroup;
 			children = (
+				EC735D6A2E28DBD100C40C28 /* PopularCity */,
+				EC735D692E28DBB000C40C28 /* Extension */,
 				ECB0A8952E20E8CE00F42EDC /* 0711HW */,
 				ECB0A8942E20E8CE00F42EDC /* Products */,
 			);
@@ -81,6 +93,8 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
+				EC735D692E28DBB000C40C28 /* Extension */,
+				EC735D6A2E28DBD100C40C28 /* PopularCity */,
 				ECB0A8952E20E8CE00F42EDC /* 0711HW */,
 			);
 			name = 0711HW;

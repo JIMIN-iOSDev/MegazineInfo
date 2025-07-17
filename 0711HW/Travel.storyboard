@@ -5,6 +5,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -433,42 +434,86 @@
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="-1" estimatedSectionHeaderHeight="-1" sectionFooterHeight="-1" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="qXc-8Z-5gn">
-                                <rect key="frame" x="16" y="223.33333333333334" width="361" height="495.66666666666663"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                            </tableView>
-                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="Rxz-qY-RTP">
-                                <rect key="frame" x="16" y="168.33333333333334" width="361" height="32"/>
-                                <segments>
-                                    <segment title="모두"/>
-                                    <segment title="해외"/>
-                                </segments>
-                            </segmentedControl>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="인기 도시" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YVQ-h1-2nb">
-                                <rect key="frame" x="16" y="117.99999999999999" width="361" height="26.333333333333329"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="22"/>
+                                <rect key="frame" x="16" y="117.99999999999999" width="361" height="20.333333333333329"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bZm-R9-KSZ">
+                                <rect key="frame" x="0.0" y="185.33333333333331" width="393" height="549.66666666666674"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="aAY-Zc-E6s">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="d8f-lU-YuR">
+                                        <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="9Uj-GS-RZG">
+                                            <rect key="frame" x="0.0" y="0.0" width="127.99999999999997" height="128"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </collectionViewCellContentView>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sAl-RH-ZJk">
+                                <rect key="frame" x="7.9999999999999929" y="146.33333333333334" width="120.33333333333331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="totalButtonTapped:" destination="f2J-xL-F9V" eventType="touchUpInside" id="LhW-5k-k4D"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uvn-De-Yxw">
+                                <rect key="frame" x="136.33333333333334" y="146.33333333333334" width="120.33333333333334" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="domesticButtonTapped:" destination="f2J-xL-F9V" eventType="touchUpInside" id="1C9-Rf-8we"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0NI-0c-oVh">
+                                <rect key="frame" x="264.66666666666669" y="146.33333333333334" width="120.33333333333331" height="35"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Button"/>
+                                <connections>
+                                    <action selector="abroadButtonTapped:" destination="f2J-xL-F9V" eventType="touchUpInside" id="dln-AI-bv1"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="bxu-V0-Ip0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Rxz-qY-RTP" firstAttribute="leading" secondItem="bxu-V0-Ip0" secondAttribute="leading" constant="16" id="HCj-a5-AX1"/>
-                            <constraint firstItem="qXc-8Z-5gn" firstAttribute="leading" secondItem="bxu-V0-Ip0" secondAttribute="leading" constant="16" id="MOu-bo-ZuH"/>
+                            <constraint firstItem="bZm-R9-KSZ" firstAttribute="leading" secondItem="bxu-V0-Ip0" secondAttribute="leading" id="43G-OK-TwQ"/>
+                            <constraint firstItem="0NI-0c-oVh" firstAttribute="leading" secondItem="Uvn-De-Yxw" secondAttribute="trailing" constant="8" id="A4L-SU-sty"/>
+                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="bottom" secondItem="bZm-R9-KSZ" secondAttribute="bottom" id="DdF-o1-in7"/>
+                            <constraint firstItem="Uvn-De-Yxw" firstAttribute="top" secondItem="YVQ-h1-2nb" secondAttribute="bottom" constant="8" id="IGL-Jw-SEu"/>
+                            <constraint firstItem="bZm-R9-KSZ" firstAttribute="top" secondItem="Uvn-De-Yxw" secondAttribute="bottom" constant="4" id="M7U-kw-aZ0"/>
                             <constraint firstItem="YVQ-h1-2nb" firstAttribute="leading" secondItem="bxu-V0-Ip0" secondAttribute="leading" constant="16" id="PY3-al-Nut"/>
-                            <constraint firstItem="qXc-8Z-5gn" firstAttribute="top" secondItem="Rxz-qY-RTP" secondAttribute="bottom" constant="24" id="QKu-Cy-elq"/>
-                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="trailing" secondItem="qXc-8Z-5gn" secondAttribute="trailing" constant="16" id="Qyd-Ix-sbS"/>
-                            <constraint firstItem="Rxz-qY-RTP" firstAttribute="top" secondItem="YVQ-h1-2nb" secondAttribute="bottom" constant="24" id="ZNl-tR-q0K"/>
+                            <constraint firstItem="bZm-R9-KSZ" firstAttribute="top" secondItem="0NI-0c-oVh" secondAttribute="bottom" constant="4" id="Z0w-kd-7br"/>
+                            <constraint firstItem="0NI-0c-oVh" firstAttribute="top" secondItem="YVQ-h1-2nb" secondAttribute="bottom" constant="8" id="Zhq-Og-W8o"/>
+                            <constraint firstItem="sAl-RH-ZJk" firstAttribute="leading" secondItem="bxu-V0-Ip0" secondAttribute="leading" constant="8" id="dda-p3-SqJ"/>
+                            <constraint firstItem="sAl-RH-ZJk" firstAttribute="top" secondItem="YVQ-h1-2nb" secondAttribute="bottom" constant="8" id="eq4-dx-bDg"/>
                             <constraint firstItem="YVQ-h1-2nb" firstAttribute="top" secondItem="bxu-V0-Ip0" secondAttribute="top" id="iFR-B9-6AG"/>
-                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="trailing" secondItem="Rxz-qY-RTP" secondAttribute="trailing" constant="16" id="o7i-og-Fd6"/>
+                            <constraint firstItem="Uvn-De-Yxw" firstAttribute="leading" secondItem="sAl-RH-ZJk" secondAttribute="trailing" constant="8" id="ohr-N3-sZ5"/>
                             <constraint firstItem="bxu-V0-Ip0" firstAttribute="trailing" secondItem="YVQ-h1-2nb" secondAttribute="trailing" constant="16" id="s82-hz-hf8"/>
-                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="bottom" secondItem="qXc-8Z-5gn" secondAttribute="bottom" constant="16" id="sMq-Ca-cPI"/>
+                            <constraint firstItem="Uvn-De-Yxw" firstAttribute="width" secondItem="sAl-RH-ZJk" secondAttribute="width" id="sDe-Cc-gg2"/>
+                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="trailing" secondItem="bZm-R9-KSZ" secondAttribute="trailing" id="sg1-lH-Vwf"/>
+                            <constraint firstItem="bxu-V0-Ip0" firstAttribute="trailing" secondItem="0NI-0c-oVh" secondAttribute="trailing" constant="8" id="vJN-eq-Vwu"/>
+                            <constraint firstItem="bZm-R9-KSZ" firstAttribute="top" secondItem="sAl-RH-ZJk" secondAttribute="bottom" constant="4" id="xgl-n7-aJd"/>
+                            <constraint firstItem="0NI-0c-oVh" firstAttribute="width" secondItem="sAl-RH-ZJk" secondAttribute="width" id="zhC-i9-dPr"/>
                         </constraints>
                     </view>
                     <tabBarItem key="tabBarItem" title="City" image="sparkle" catalog="system" id="8Id-B5-2g7"/>
                     <connections>
-                        <outlet property="cityTableView" destination="qXc-8Z-5gn" id="xOG-fZ-wGA"/>
+                        <outlet property="abroadButton" destination="0NI-0c-oVh" id="wsm-RJ-u70"/>
+                        <outlet property="cityCollectionView" destination="bZm-R9-KSZ" id="Jbq-X1-2JX"/>
+                        <outlet property="domesticButton" destination="Uvn-De-Yxw" id="ssV-Ce-JEW"/>
+                        <outlet property="totalButton" destination="sAl-RH-ZJk" id="Alq-ZU-qpw"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hWv-53-5ze" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
