@@ -7,6 +7,9 @@
 
 import Foundation
 
+private let inputFormat = DateFormatter()
+private let outputFormat = DateFormatter()
+
 struct User {
     let name: String //유저 닉네임
     let image: String //유저 프로필
@@ -25,6 +28,18 @@ struct ChatRoom {
     let chatroomImage: String //채팅방 이미지
     let chatroomName: String //채팅방 이름
     var chatList: [Chat] = [] //채팅 화면에서 사용할 데이터
+    
+    var date: String {
+        inputFormat.dateFormat = "yyyy-MM-dd HH:mm"
+        outputFormat.dateFormat = "yy.MM.dd"
+
+        if let dateString = chatList.last?.date,
+           let date = inputFormat.date(from: dateString) {
+            return outputFormat.string(from: date)
+        } else {
+            return ""
+        }
+    }
 }
 
 struct ChatList {

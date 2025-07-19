@@ -14,9 +14,6 @@ class TalkCollectionViewCell: UICollectionViewCell {
     @IBOutlet var chatLabel: UILabel!
     @IBOutlet var dateLabel: UILabel!
     
-    private let inputFormat = DateFormatter()
-    private let outputFormat = DateFormatter()
-    
     static let identifier = "TalkCollectionViewCell"
     
     override func awakeFromNib() {
@@ -37,14 +34,6 @@ class TalkCollectionViewCell: UICollectionViewCell {
         profileImage.image = UIImage(named: row.chatroomImage)
         nameLabel.text = row.chatroomName
         chatLabel.text = row.chatList.last?.message
-        
-        inputFormat.dateFormat = "yyyy-MM-dd HH:mm"
-        outputFormat.dateFormat = "yy.MM.dd"
-        
-        if let dateString = row.chatList.last?.date,
-           let date = inputFormat.date(from: dateString) {
-            dateLabel.text = outputFormat.string(from: date)
-        }
+        dateLabel.text = row.date
     }
-
 }
