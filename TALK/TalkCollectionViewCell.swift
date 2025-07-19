@@ -21,7 +21,7 @@ class TalkCollectionViewCell: UICollectionViewCell {
         configureView()
     }
     
-    func configureView() {
+    private func configureView() {
         nameLabel.font = .boldSystemFont(ofSize: 17)
         nameLabel.textColor = .black
         chatLabel.font = .systemFont(ofSize: 15)

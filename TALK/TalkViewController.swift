@@ -44,6 +44,11 @@ class TalkViewController: UIViewController, UICollectionViewDelegate, UICollecti
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: TalkCollectionViewCell.identifier, for: indexPath) as! TalkCollectionViewCell
         cell.configure(row: list[indexPath.item])
         
+        DispatchQueue.main.async {
+            cell.profileImage.layer.cornerRadius = cell.profileImage.frame.width / 2
+        }
+        cell.profileImage.clipsToBounds = true
+        
         return cell
     }
     
