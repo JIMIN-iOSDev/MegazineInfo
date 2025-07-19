@@ -69,6 +69,11 @@
 			path = 369Game;
 			sourceTree = "<group>";
 		};
+		ECE8B6CB2E2BCC360079FA95 /* TALK */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = TALK;
+			sourceTree = "<group>";
+		};
 /* End PBXFileSystemSynchronizedRootGroup section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -87,6 +92,7 @@
 		ECB0A88A2E20E8CE00F42EDC = {
 			isa = PBXGroup;
 			children = (
+				ECE8B6CB2E2BCC360079FA95 /* TALK */,
 				ECE8B5DA2E29371F0079FA95 /* 369Game */,
 				ECE8B5D92E2936A00079FA95 /* Magazine */,
 				ECE8B5D82E29367C0079FA95 /* Travel */,
@@ -131,6 +137,7 @@
 				ECE8B5D82E29367C0079FA95 /* Travel */,
 				ECE8B5D92E2936A00079FA95 /* Magazine */,
 				ECE8B5DA2E29371F0079FA95 /* 369Game */,
+				ECE8B6CB2E2BCC360079FA95 /* TALK */,
 			);
 			name = 0711HW;
 			packageProductDependencies = (
