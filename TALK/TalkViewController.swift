@@ -9,15 +9,15 @@ import UIKit
 
 class TalkViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
 
-    @IBOutlet var talkCollectionView: UICollectionView!
-    let list = ChatList.list
+    @IBOutlet private var talkCollectionView: UICollectionView!
+    private let list = ChatList.list
     
     override func viewDidLoad() {
         super.viewDidLoad()
         configureCollectionView()
     }
 
-    func configureCollectionView() {
+    private func configureCollectionView() {
         talkCollectionView.delegate = self
         talkCollectionView.dataSource = self
         
@@ -54,6 +54,10 @@ class TalkViewController: UIViewController, UICollectionViewDelegate, UICollecti
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         let vc = self.storyboard?.instantiateViewController(withIdentifier: "ChatViewController") as! ChatViewController
+
+        vc.chatroomId = list[indexPath.row].chatroomId
+        vc.navigationTitle = list[indexPath.row].chatroomName
+        
         navigationController?.pushViewController(vc, animated: true)
     }
 }
