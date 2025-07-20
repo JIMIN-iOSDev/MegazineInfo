@@ -9,7 +9,8 @@ import UIKit
 
 class AnswerTableViewCell: UITableViewCell {
 
-    @IBOutlet private var chatLabel: UILabel!
+    @IBOutlet var chatUIView: UIView!
+    @IBOutlet var chatLabel: UILabel!
     @IBOutlet private var timeLabel: UILabel!
     
     static let identifier = "AnswerTableViewCell"
@@ -22,11 +23,12 @@ class AnswerTableViewCell: UITableViewCell {
     }
     
     private func configureView() {
-        chatLabel.layer.borderWidth = 1
-        chatLabel.layer.borderColor = UIColor.systemGray2.cgColor
-        chatLabel.backgroundColor = .systemGray5
-        chatLabel.layer.cornerRadius = 5
-        chatLabel.clipsToBounds = true
+        chatUIView.layer.cornerRadius = 10
+        chatUIView.clipsToBounds = true
+        chatUIView.layer.borderColor = UIColor.systemGray2.cgColor
+        chatUIView.layer.borderWidth = 1
+        chatUIView.backgroundColor = .systemGray5
+        chatLabel.backgroundColor = .clear
         timeLabel.textAlignment = .right
     }
     

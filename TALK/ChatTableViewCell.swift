@@ -11,7 +11,8 @@ class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet private var messageLabel: UILabel!
+    @IBOutlet var messageUIView: UIView!
+    @IBOutlet var messageLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     
     static let identifier = "ChatTableViewCell"
@@ -24,10 +25,10 @@ class ChatTableViewCell: UITableViewCell {
     }
     
     private func configureView() {
-        messageLabel.layer.borderWidth = 1
-        messageLabel.layer.borderColor = UIColor.gray.cgColor
-        messageLabel.layer.cornerRadius = 5
-        messageLabel.clipsToBounds = true
+        messageUIView.layer.cornerRadius = 10
+        messageUIView.clipsToBounds = true
+        messageUIView.layer.borderColor = UIColor.systemGray2.cgColor
+        messageUIView.layer.borderWidth = 1
     }
     
     func configureData(row: Chat) {

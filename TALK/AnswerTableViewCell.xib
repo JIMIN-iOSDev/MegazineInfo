@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -16,14 +17,8 @@
                 <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lBF-7T-3gI">
-                        <rect key="frame" x="262.66666666666669" y="8" width="41.333333333333314" height="28"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s0d-cp-BTy">
-                        <rect key="frame" x="222.66666666666666" y="28" width="32" height="8"/>
+                        <rect key="frame" x="208.33333333333334" y="28" width="32" height="8"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="8" id="FhG-aH-JNY"/>
                             <constraint firstAttribute="width" constant="32" id="xbq-i1-e86"/>
@@ -32,22 +27,46 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="enZ-XV-jvx">
+                        <rect key="frame" x="248.33333333333334" y="8" width="55.666666666666657" height="28"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lTW-Dk-6m1">
+                                <rect key="frame" x="7.9999999999999716" y="8" width="39.666666666666664" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="lTW-Dk-6m1" firstAttribute="top" secondItem="enZ-XV-jvx" secondAttribute="top" constant="8" id="HOn-Q8-scE"/>
+                            <constraint firstItem="lTW-Dk-6m1" firstAttribute="leading" secondItem="enZ-XV-jvx" secondAttribute="leading" constant="8" id="hhj-xk-E0j"/>
+                            <constraint firstAttribute="bottom" secondItem="lTW-Dk-6m1" secondAttribute="bottom" constant="8" id="xkO-4j-YFG"/>
+                            <constraint firstAttribute="trailing" secondItem="lTW-Dk-6m1" secondAttribute="trailing" constant="8" id="yp5-Ao-7Es"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="enZ-XV-jvx" firstAttribute="leading" secondItem="s0d-cp-BTy" secondAttribute="trailing" constant="8" id="1ML-fh-jaA"/>
                     <constraint firstItem="s0d-cp-BTy" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="4GY-br-fmh"/>
-                    <constraint firstAttribute="trailing" secondItem="lBF-7T-3gI" secondAttribute="trailing" constant="16" id="KwA-JY-QIN"/>
-                    <constraint firstAttribute="bottom" secondItem="lBF-7T-3gI" secondAttribute="bottom" constant="8" id="QRr-1z-cAM"/>
-                    <constraint firstItem="s0d-cp-BTy" firstAttribute="bottom" secondItem="lBF-7T-3gI" secondAttribute="bottom" id="RSI-yz-mcZ"/>
-                    <constraint firstItem="lBF-7T-3gI" firstAttribute="leading" secondItem="s0d-cp-BTy" secondAttribute="trailing" constant="8" id="gYF-s3-jtG"/>
-                    <constraint firstItem="lBF-7T-3gI" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="x2d-xv-PD3"/>
+                    <constraint firstItem="enZ-XV-jvx" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="64l-2U-2pG"/>
+                    <constraint firstAttribute="trailing" secondItem="enZ-XV-jvx" secondAttribute="trailing" constant="16" id="Hws-Ud-sBH"/>
+                    <constraint firstItem="s0d-cp-BTy" firstAttribute="bottom" secondItem="enZ-XV-jvx" secondAttribute="bottom" id="caE-Ah-QPl"/>
+                    <constraint firstAttribute="bottom" secondItem="enZ-XV-jvx" secondAttribute="bottom" constant="8" id="wih-Sx-0KO"/>
                 </constraints>
             </tableViewCellContentView>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
-                <outlet property="chatLabel" destination="lBF-7T-3gI" id="SCa-vY-mxu"/>
+                <outlet property="chatLabel" destination="lTW-Dk-6m1" id="mTq-IK-waX"/>
+                <outlet property="chatUIView" destination="enZ-XV-jvx" id="MJe-BN-0yb"/>
                 <outlet property="timeLabel" destination="s0d-cp-BTy" id="EPE-p0-17x"/>
             </connections>
-            <point key="canvasLocation" x="139" y="21"/>
+            <point key="canvasLocation" x="138.93129770992365" y="20.422535211267608"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>

@@ -4,6 +4,7 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="23721"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
@@ -31,14 +32,8 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GUX-ot-t4r">
-                        <rect key="frame" x="64" y="40" width="41.333333333333343" height="20.333333333333329"/>
-                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="88:88" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gmi-b2-Wt7">
-                        <rect key="frame" x="113.33333333333331" y="52.333333333333336" width="32" height="8"/>
+                        <rect key="frame" x="127.66666666666669" y="67.333333333333329" width="32" height="8"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="8" id="EGX-xK-he8"/>
                             <constraint firstAttribute="width" constant="32" id="oZw-S5-8cg"/>
@@ -47,18 +42,36 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="hv8-Su-AFF">
+                        <rect key="frame" x="64" y="40" width="55.666666666666657" height="35.333333333333343"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="l8b-Fg-kb3">
+                                <rect key="frame" x="8" y="7.9999999999999982" width="39.666666666666664" height="19.333333333333329"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="l8b-Fg-kb3" firstAttribute="leading" secondItem="hv8-Su-AFF" secondAttribute="leading" constant="8" id="0OM-EK-N4I"/>
+                            <constraint firstAttribute="trailing" secondItem="l8b-Fg-kb3" secondAttribute="trailing" constant="8" id="3Ml-4T-lZ5"/>
+                            <constraint firstAttribute="bottom" secondItem="l8b-Fg-kb3" secondAttribute="bottom" constant="8" id="oZN-Wz-Tpx"/>
+                            <constraint firstItem="l8b-Fg-kb3" firstAttribute="top" secondItem="hv8-Su-AFF" secondAttribute="top" constant="8" id="wXW-pP-Te4"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
+                    <constraint firstItem="gmi-b2-Wt7" firstAttribute="leading" secondItem="hv8-Su-AFF" secondAttribute="trailing" constant="8" id="1k2-6c-rjk"/>
                     <constraint firstAttribute="bottom" secondItem="mDo-mJ-xgd" secondAttribute="bottom" constant="44" id="2zY-DF-hyE"/>
-                    <constraint firstItem="GUX-ot-t4r" firstAttribute="bottom" secondItem="gmi-b2-Wt7" secondAttribute="bottom" id="4mN-Eg-mBz"/>
+                    <constraint firstItem="gmi-b2-Wt7" firstAttribute="bottom" secondItem="hv8-Su-AFF" secondAttribute="bottom" id="55K-Uc-8io"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gmi-b2-Wt7" secondAttribute="trailing" constant="8" id="8r0-Ug-dgo"/>
-                    <constraint firstItem="GUX-ot-t4r" firstAttribute="leading" secondItem="mDo-mJ-xgd" secondAttribute="trailing" constant="8" id="9GH-Jh-aAP"/>
                     <constraint firstAttribute="trailing" secondItem="jBA-A8-vaX" secondAttribute="trailing" id="AjK-kk-ZyF"/>
                     <constraint firstItem="mDo-mJ-xgd" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="16" id="ERZ-DE-EM1"/>
-                    <constraint firstItem="GUX-ot-t4r" firstAttribute="top" secondItem="jBA-A8-vaX" secondAttribute="bottom" constant="8" id="MzK-Ie-1gk"/>
+                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="hv8-Su-AFF" secondAttribute="bottom" constant="8" id="INY-bk-aWE"/>
                     <constraint firstItem="jBA-A8-vaX" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="O0k-nf-vT6"/>
-                    <constraint firstItem="gmi-b2-Wt7" firstAttribute="leading" secondItem="GUX-ot-t4r" secondAttribute="trailing" constant="8" id="Sot-h8-4Eb"/>
-                    <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="GUX-ot-t4r" secondAttribute="bottom" constant="8" id="YU9-rM-KzB"/>
+                    <constraint firstItem="hv8-Su-AFF" firstAttribute="leading" secondItem="mDo-mJ-xgd" secondAttribute="trailing" constant="8" id="Wbe-pr-I99"/>
+                    <constraint firstItem="hv8-Su-AFF" firstAttribute="top" secondItem="jBA-A8-vaX" secondAttribute="bottom" constant="8" id="YAZ-8w-TCn"/>
                     <constraint firstItem="jBA-A8-vaX" firstAttribute="leading" secondItem="mDo-mJ-xgd" secondAttribute="trailing" constant="8" id="hWA-Oo-czc"/>
                     <constraint firstItem="mDo-mJ-xgd" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="v3P-gi-HT4"/>
                 </constraints>
@@ -66,11 +79,17 @@
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
             <connections>
                 <outlet property="dateLabel" destination="gmi-b2-Wt7" id="VFP-rW-d1n"/>
-                <outlet property="messageLabel" destination="GUX-ot-t4r" id="3RB-fX-cnh"/>
+                <outlet property="messageLabel" destination="l8b-Fg-kb3" id="0gf-eS-v5g"/>
+                <outlet property="messageUIView" destination="hv8-Su-AFF" id="zk5-rB-7Rn"/>
                 <outlet property="nameLabel" destination="jBA-A8-vaX" id="MTt-uC-rVl"/>
                 <outlet property="profileImage" destination="mDo-mJ-xgd" id="Y4h-FR-Vtc"/>
             </connections>
             <point key="canvasLocation" x="138.93129770992365" y="37.323943661971832"/>
         </tableViewCell>
     </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
 </document>
