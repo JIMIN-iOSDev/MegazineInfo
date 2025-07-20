@@ -11,8 +11,8 @@ class ChatTableViewCell: UITableViewCell {
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
-    @IBOutlet var messageUIView: UIView!
-    @IBOutlet var messageLabel: UILabel!
+    @IBOutlet private var messageUIView: UIView!
+    @IBOutlet private var messageLabel: UILabel!
     @IBOutlet private var dateLabel: UILabel!
     
     static let identifier = "ChatTableViewCell"

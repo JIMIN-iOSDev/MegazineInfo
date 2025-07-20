@@ -9,8 +9,8 @@ import UIKit
 
 class AnswerTableViewCell: UITableViewCell {
 
-    @IBOutlet var chatUIView: UIView!
-    @IBOutlet var chatLabel: UILabel!
+    @IBOutlet private var chatUIView: UIView!
+    @IBOutlet private var chatLabel: UILabel!
     @IBOutlet private var timeLabel: UILabel!
     
     static let identifier = "AnswerTableViewCell"
