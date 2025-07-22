@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ChatTableViewCell: UITableViewCell {
+class ChatTableViewCell: UITableViewCell, CellProtocol {
     
     @IBOutlet var profileImage: UIImageView!
     @IBOutlet private var nameLabel: UILabel!
@@ -24,7 +24,7 @@ class ChatTableViewCell: UITableViewCell {
         configureView()
     }
     
-    private func configureView() {
+    func configureView() {
         messageUIView.layer.cornerRadius = 10
         messageUIView.clipsToBounds = true
         messageUIView.layer.borderColor = UIColor.systemGray2.cgColor

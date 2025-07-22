@@ -7,7 +7,7 @@
 
 import UIKit
 
-class AnswerTableViewCell: UITableViewCell {
+class AnswerTableViewCell: UITableViewCell, CellProtocol {
 
     @IBOutlet private var chatUIView: UIView!
     @IBOutlet private var chatLabel: UILabel!
@@ -22,7 +22,7 @@ class AnswerTableViewCell: UITableViewCell {
         configureView()
     }
     
-    private func configureView() {
+    func configureView() {
         chatUIView.layer.cornerRadius = 10
         chatUIView.clipsToBounds = true
         chatUIView.layer.borderColor = UIColor.systemGray2.cgColor
