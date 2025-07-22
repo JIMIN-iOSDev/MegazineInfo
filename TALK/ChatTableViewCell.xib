@@ -21,6 +21,8 @@
                         <rect key="frame" x="16" y="8" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" secondItem="mDo-mJ-xgd" secondAttribute="height" id="LjW-6f-zi8"/>
+                            <constraint firstAttribute="width" constant="40" id="WFm-a7-DBP"/>
+                            <constraint firstAttribute="height" constant="40" id="feA-jd-CDx"/>
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jBA-A8-vaX">
@@ -63,7 +65,6 @@
                 </subviews>
                 <constraints>
                     <constraint firstItem="gmi-b2-Wt7" firstAttribute="leading" secondItem="hv8-Su-AFF" secondAttribute="trailing" constant="8" id="1k2-6c-rjk"/>
-                    <constraint firstAttribute="bottom" secondItem="mDo-mJ-xgd" secondAttribute="bottom" constant="44" id="2zY-DF-hyE"/>
                     <constraint firstItem="gmi-b2-Wt7" firstAttribute="bottom" secondItem="hv8-Su-AFF" secondAttribute="bottom" id="55K-Uc-8io"/>
                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="gmi-b2-Wt7" secondAttribute="trailing" constant="8" id="8r0-Ug-dgo"/>
                     <constraint firstAttribute="trailing" secondItem="jBA-A8-vaX" secondAttribute="trailing" id="AjK-kk-ZyF"/>

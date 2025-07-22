@@ -35,7 +35,8 @@ class ChatViewController: UIViewController, UITableViewDelegate, UITableViewData
         chatTableView.delegate = self
         chatTableView.dataSource = self
         
-        chatTableView.rowHeight = 100
+        chatTableView.rowHeight = UITableView.automaticDimension
+        chatTableView.separatorStyle = .none
         
         let xib = UINib(nibName: "ChatTableViewCell", bundle: nil)
         chatTableView.register(xib, forCellReuseIdentifier: ChatTableViewCell.identifier)
